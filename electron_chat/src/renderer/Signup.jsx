@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-export default class Signup extends React.component {
+export default class Signup extends React.Component {
     render(){
         return (
             <div>
