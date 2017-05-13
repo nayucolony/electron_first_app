@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 
-export default class Rooms extends React.Component(
+export default class Rooms extends React.Component{
     render(){
         return (
             <div>
