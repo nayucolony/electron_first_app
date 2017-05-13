@@ -6,7 +6,7 @@ export default class Login extends React.Component {
         return(
             <div>
                 <h2>Login</h2>
-                <Link to="/rooms">Login</Link><br>
+                <Link to="/rooms">Login</Link><br />
                 <Link to="/signup">Create new account</Link>
             </div>
         );
