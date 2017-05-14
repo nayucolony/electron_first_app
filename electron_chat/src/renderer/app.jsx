@@ -8,6 +8,14 @@ import Room from "./Room";
 
 import firebase from "firebase/firebase-browser";
 
+const config = {
+    apiKey: "AIzaSyCtdtTOz5imTNbA3R-YS7IwYtuYgB5r9Eg",
+    authDomain: "electron-chat-7eeb7.firebaseapp.com",
+    databaseURL: "https://electron-chat-7eeb7.firebaseio.com",
+    storageBucket: "electron-chat-7eeb7.appspot.com",
+};
+
+firebase.initializeApp(config);
 
 const appRouting = (
     <Router history={hashHistory}>
@@ -25,16 +33,8 @@ if(!location.hash.length){
     location.hash = "#/login";
 }
 
-const config = {
-    apiKey: "AIzaSyCtdtTOz5imTNbA3R-YS7IwYtuYgB5r9Eg",
-    authDomain: "electron-chat-7eeb7.firebaseapp.com",
-    databaseURL: "https://electron-chat-7eeb7.firebaseio.com",
-    projectId: "electron-chat-7eeb7",
-    storageBucket: "electron-chat-7eeb7.appspot.com",
-    messagingSenderId: "41782197380"
-};
 
-firebase.initializeApp(config);
+
 
 render(appRouting, document.getElementById("app"));
 
