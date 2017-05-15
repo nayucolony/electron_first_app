@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const ERRORS_STYLE = {
     padding: 10,
     marginBottom: 30,
@@ -9,15 +8,14 @@ const ERRORS_STYLE = {
     backgroundColor: "#FFDDDF"
 };
 
-export default function Errors(props){
+export default function Errors(props) {
     const { errorMessages } = props;
-    if(!errorMessages || !errorMessages.length){
+    if (!errorMessages || !errorMessages.length) {
         return null;
     }
-
-    return(
+    return (
         <div style={ERRORS_STYLE}>
-            {errorMessages.map(e => <div key={e}>{e}</div>)}
+            {errorMessages.map(e => <div key={e}>{e}</div> )}
         </div>
     );
 }

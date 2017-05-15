@@ -1,20 +1,20 @@
 import { app } from "electron";
-import createWindow from "./createWindow"
-import setAppMenu from "./setAppMenu"
+import setAppMenu from "./setAppMenu";
+import createWindow from "./createWindow";
 
-app.on("ready",() => {
+app.on("ready", () => {
     setAppMenu();
     createWindow();
-})
+});
 
-app.on("window-all-closed",() => {
-    if(process.platform !== "darwin"){
+app.on("window-all-closed", () => {
+    if (process.platform !== "darwin") {
         app.quit();
     }
 });
 
-app.on("activate",(_e, hasVisibleWindows) => {
-    if(!hasVisibleWindows){
+app.on("activate", (_e, hasVisibleWindows) => {
+    if (!hasVisibleWindows) {
         createWindow();
     }
 });

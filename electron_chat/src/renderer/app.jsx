@@ -17,6 +17,7 @@ const config = {
 
 firebase.initializeApp(config);
 
+// Routingの定義
 const appRouting = (
     <Router history={hashHistory}>
         <Route path="/">
@@ -29,12 +30,10 @@ const appRouting = (
     </Router>
 );
 
-if(!location.hash.length){
+// Routingの初期化
+if (!location.hash.length) {
     location.hash = "#/login";
 }
 
-
-
-
+// Applicationをrendering
 render(appRouting, document.getElementById("app"));
-

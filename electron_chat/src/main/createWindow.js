@@ -1,7 +1,7 @@
 import { BrowserWindow } from "electron";
 
 let win;
-function createWindow(){
+function createWindow() {
     win = new BrowserWindow();
     win.loadURL(`file://${__dirname}/../../index.html`);
     win.on("close", () => {
@@ -10,3 +10,4 @@ function createWindow(){
 }
 
 export default createWindow;
+
